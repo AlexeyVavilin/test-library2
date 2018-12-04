@@ -1,0 +1,16 @@
+[package]
+name = "mtproto_crypto"
+version = "0.1.0"
+authors = ["AlexeyVavilin"]
+
+[lib]
+name = "mtproto_crypto"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+libc = "0.2"
+rand = "0.6.1"
+jni = { version = "0.5.1", optional = true, default-features = false }
+
+[features]
+default = ["jni"]
